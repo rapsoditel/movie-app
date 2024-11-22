@@ -6,6 +6,17 @@ function debounce<T extends (...args: any[]) => void>(callback: T, delay: number
   };
 }
 
+function createInitials(name: string): string {
+  if (!name) return '';
+  const nameParts = name.split(' ').filter(Boolean);
+  const initials = nameParts
+      .slice(0, 2)
+      .map(part => part[0].toUpperCase())
+      .join('');
+  return initials;
+}
+
 export {
-  debounce
+  debounce,
+  createInitials
 }

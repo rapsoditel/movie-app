@@ -20,6 +20,18 @@ describe('MovieDetail', () => {
       { id: 2, name: 'Sci-Fi' },
     ],
     overview: 'A mind-bending thriller.',
+    release_date: '2010-07-15',
+    tagline: "Your mind is the scene of the crime",
+    production_companies: [
+      {
+        id: 1,
+        name: "Legendary Pictures",
+      },
+      {
+        id: 2,
+        name: "Syncopy"
+      }
+    ]
   };
 
   it('renders movie details correctly after fetch', async () => {
@@ -40,6 +52,9 @@ describe('MovieDetail', () => {
       expect(screen.getByText('Action')).toBeInTheDocument();
       expect(screen.getByText('Sci-Fi')).toBeInTheDocument();
       expect(screen.getByText('A mind-bending thriller.')).toBeInTheDocument();
+      expect(screen.getByText('(2010)')).toBeInTheDocument();
+      expect(screen.getByText('Legendary Pictures')).toBeInTheDocument();
+      expect(screen.getByText('Syncopy')).toBeInTheDocument();
     });
   });
 
