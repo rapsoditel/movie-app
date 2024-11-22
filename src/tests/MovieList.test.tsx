@@ -1,5 +1,5 @@
 import { render, screen, waitFor, fireEvent } from "@testing-library/react";
-import { MemoryRouter, useSearchParams } from "react-router-dom";
+import { MemoryRouter } from "react-router-dom";
 import { Mock, vi } from "vitest";
 import { tmdbApi } from "../utils/api";
 import MovieList from "../components/MovieList";

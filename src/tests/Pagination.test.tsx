@@ -1,5 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import Pagination from "../components/Pagination";
+import { Mock } from "vitest";
 
 
 describe("Pagination Component", () => {
